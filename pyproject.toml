@@ -1,6 +1,6 @@
 [project]
 name = "xls_is_for_corporate"
-version = "1.0.1a2"
+version = "1.0.1"
 description = "XLS is for corporate, convert it to something else"
 authors = [
     {name = "Felipe Quécole",email = "felipequecole@gmail.com"}
