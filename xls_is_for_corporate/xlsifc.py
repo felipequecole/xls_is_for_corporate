@@ -1,5 +1,5 @@
 from typing import Any, Optional
-from click import command, option
+from click import command, option, version_option
 from click.types import Choice, Path
 from rich.console import Console
 from xls_is_for_corporate.converter import Spreadsheet
@@ -64,11 +64,11 @@ def handle_save(sheet_data: list[dict[str, Any]], format: str, output: str):
     type=str,
     required=False,
 )
+@version_option()
 def cli(file: str, format: str, output: str, sheet: Optional[str]):
     console.log(f"Reading input from file {file}")
     spreadsheet = Spreadsheet(path=file)
     worksheets = spreadsheet.get_worksheets()
-    console.log(worksheets)
     if sheet and sheet in worksheets:
         sheet_data = spreadsheet.read_sheet(sheet=sheet)
     else:

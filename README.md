@@ -6,7 +6,7 @@ it as a table in the terminal or save it as json or csv into a file
 ## Usage
 
 ```text
-Usage: xlsifc.py [OPTIONS]
+Usage: xlsifc [OPTIONS]
 
 Options:
   -f, --file FILE          [required]
@@ -14,19 +14,20 @@ Options:
   -o, --output PATH        Output file
   -s, --sheet TEXT         Speficic sheet inside workbook (if not provided,
                            you will be asked
-  --help                   Show help message and exit.
+  --version                Show the version and exit.
+  --help                   Show this message and exit.
 ```
 
 ## Installation
 
+### Using pipx
+
+```commandline
+pipx install xls_is_for_corporate
+```
+
 ### Using pip
 
 ```commandline
-pip3 install -r requirements.txt
-```
-
-### Using poetry
-
-```commandline
-poetry install
+pip3 install xls_is_for_corporate
 ```
